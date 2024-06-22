@@ -1,0 +1,87 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 4fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+    background-color: beige;
+}
+
+/* ------------------------------ sidebar start --------------------------------- */
+
+.sidebar {
+    background-color: rgb(20, 141, 189);
+    grid-area: sidebar;
+    /* fix below later */
+    text-align: center; 
+    color: white;
+}
+
+/* ------------------------------ header  start --------------------------------- */
+
+.header {
+    grid-area: header;
+    background-color: white;
+}
+
+.searchbar {
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchbar img {
+    width: 3vw;
+    height: 3vh;
+}
+
+.searchbar input {
+    width: 40vw;
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    background-color: lightgray;
+    box-shadow: none;
+    margin-right: 10vw;
+}
+
+/* ------------------------------ main  start ----------------------------------- */
+
+.main {
+    padding: 10px;
+    grid-area: main;
+    display: grid;
+    background-color: rgb(228, 228, 228);
+    grid-template-columns: 4fr 1fr;
+    gap: 10px;
+}
+
+.main-col1 {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template: repeat(3, 1fr) /
+                   repeat(2, 1fr);
+    gap: 20px;
+}
+
+.main div[class^="card"] {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+div[class^="card"]>p:nth-child(2) {
+    font-size: small;
+}
+
+p[class='title'] {
+    font-weight: bold;
+    font-size: medium;
+}
+
