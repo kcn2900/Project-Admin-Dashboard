@@ -7,14 +7,22 @@ li {
     list-style-type: none;
 }
 
+
 .grid {
-    height: 100vh;
+    position: relative;
+    height: 90vh;
     display: grid;
     grid-template: 1fr 5fr / 1fr 4fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
     background-color: beige;
+}
+
+.credits {
+    position: absolute;
+    top: 95vh;
+    left: 15px;
 }
 
 /* ------------------------------ sidebar start --------------------------------- */
@@ -24,7 +32,7 @@ li {
     background-color: rgb(20, 141, 189);
     grid-area: sidebar;
     color: white;
-
+    height: 97.75%;
     
     display: grid;
     grid-template-rows: 1fr 3fr 8fr;
@@ -158,8 +166,8 @@ p[class='title'] {
 
 .main-col2 {
     display: grid;
-    gap: 10px;
-    grid-template-rows: 0fr 5fr 0fr 5fr;
+    gap: 20px;
+    grid-template-rows: 0fr 3fr 0fr 4fr;
 }
 
 .main-col2 .title {
@@ -187,3 +195,7 @@ hr {
     border-radius: 5px;
 }
 
+.trending {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 2fr;
+}
