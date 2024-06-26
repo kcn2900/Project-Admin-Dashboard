@@ -7,22 +7,14 @@ li {
     list-style-type: none;
 }
 
-
 .grid {
-    position: relative;
-    height: 90vh;
+    height: 100vh;
     display: grid;
-    grid-template: 1fr 5fr / 1fr 4fr;
+    grid-template: 0fr / 1fr 4fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
     background-color: beige;
-}
-
-.credits {
-    position: absolute;
-    top: 95vh;
-    left: 15px;
 }
 
 /* ------------------------------ sidebar start --------------------------------- */
@@ -32,11 +24,9 @@ li {
     background-color: rgb(20, 141, 189);
     grid-area: sidebar;
     color: white;
-    height: 97.75%;
     
     display: grid;
-    grid-template-rows: 1fr 3fr 8fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 8fr 1fr;
 }
 
 .sidebar-row1 {
@@ -45,7 +35,7 @@ li {
     align-items: end;
 
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
@@ -63,7 +53,7 @@ li {
     margin-left: 10px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(6, 1fr) 2fr repeat(3, 1fr);
     gap: 10px;
 }
@@ -82,14 +72,14 @@ li {
     background-color: white;
 
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    gap: 30px;
+    grid-template-rows: 1fr 1fr;
 }
 
 .searchbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
+    display: grid;
+    grid-template: 0fr / 0fr 0fr 1fr 1fr 5fr;
+    align-items: center;
+    margin-left: 3vw;
 }
 
 .searchbar img,
@@ -98,21 +88,44 @@ li {
     height: 3vh;
 }
 
+.searchbar img:first-child {
+    margin-right: 1vw;
+}
+
+.header img[class="user1"] {
+    width: 6vw;
+    height: 6vh;
+    position: relative;
+}
+
+.header .user2 {
+    width: 8vw;
+    height: 8vh;
+}
+
 .searchbar input {
     width: 40vw;
     appearance: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: lightgray;
     box-shadow: none;
-    margin-right: 10vw;
+    height: 3vh;
+    padding: 0px 5px;
+    margin-right: 7vw;
 }
 
 .header-row2 {
     display: grid;
-    grid-template: 0fr / 0fr 6fr repeat(3, 1.2fr);
+    grid-template: 0fr / 0fr 4fr 3fr;
     padding-left: 50px;
     padding-right: 40px;
+    align-items: center;
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -122,6 +135,8 @@ li {
     border: none;
     border-radius: 20px;
     color: white;
+    font-size: 15px;
+    height: 5vh;
 }
 
 /* ------------------------------ main  start ----------------------------------- */
@@ -185,8 +200,9 @@ hr {
 }
 
 .main-col2 img {
-    width: 3vw;
-    height: 3vh;
+    width: 5vw;
+    height: 5vh;
+    margin-left: -1vw;
 }
 
 .main-col2>div {
@@ -197,5 +213,5 @@ hr {
 
 .trending {
     display: grid;
-    grid-template: repeat(4, 1fr) / 1fr 2fr;
+    grid-template: repeat(4, 1fr) / 0fr 4fr;
 }
